@@ -15,8 +15,10 @@ public class GameInfo {
 	public List<List<Tile>> map;
 	public Map<String, PlayerInfo> otherPlayers = new HashMap<>();
 
-	public GameInfo() {
-	}
+    private com.team_glados.map.Map ComputedMap = new com.team_glados.map.Map();
+
+    public GameInfo() {
+    }
 
 	public boolean hasTileNextToPlayer(TileContent tileContent) {
 		return (map.get(9).get(10).Content == tileContent)
@@ -27,16 +29,16 @@ public class GameInfo {
 
 	public Point findTileNextToPlayer(TileContent tileContent) {
 		if (map.get(9).get(10).Content == tileContent) {
-			return new Point(9, 10);
-		}
-		if (map.get(11).get(10).Content == tileContent) {
-			return new Point(11, 10);
-		}
-		if (map.get(10).get(9).Content == tileContent) {
 			return new Point(10, 9);
 		}
-		if (map.get(10).get(11).Content == tileContent) {
+		if (map.get(11).get(10).Content == tileContent) {
 			return new Point(10, 11);
+		}
+		if (map.get(10).get(9).Content == tileContent) {
+			return new Point(9, 10);
+		}
+		if (map.get(10).get(11).Content == tileContent) {
+			return new Point(11, 10);
 		}
 		return null;
 	}
@@ -49,23 +51,32 @@ public class GameInfo {
 	public void fromJson(String data) {
 		JSONParser parser = new JSONParser();
 
-		try {
-			JSONObject gameInfo = (JSONObject) parser.parse(data);
-			JSONObject player = (JSONObject) gameInfo.get("Player");
-			this.player.fromJson(player);
-			String customSerializedMap = String.valueOf(gameInfo.get("CustomSerializedMap"));
-			this.map = AiHelper.deserializeMap(customSerializedMap);
-			JSONArray jaobj = (JSONArray) gameInfo.get("OtherPlayers");
-			Object[] otherPlayers = jaobj.toArray();
-			for (Object obj : otherPlayers) {
-				PlayerInfo playerInfo = new PlayerInfo();
-				JSONObject otherPlayer = (JSONObject) obj;
-				playerInfo.fromJson(otherPlayer);
-				this.otherPlayers.put(playerInfo.Name, playerInfo);
-			}
-		} catch (ParseException pe) {
-			System.out.println("position: " + pe.getPosition());
-			System.out.println(pe);
-		}
-	}
+        try {
+            JSONObject gameInfo = (JSONObject)parser.parse(data);
+            JSONObject player = (JSONObject)gameInfo.get("Player");
+            this.player.fromJson(player);
+            String customSerializedMap = String.valueOf(gameInfo.get("CustomSerializedMap"));
+            this.map = AiHelper.deserializeMap(customSerializedMap);
+            JSONArray jaobj = (JSONArray)gameInfo.get("OtherPlayers");
+            Object[] otherPlayers = jaobj.toArray();
+            for (Object obj : otherPlayers) {
+                PlayerInfo playerInfo = new PlayerInfo();
+                JSONObject otherPlayer = (JSONObject)obj;
+                playerInfo.fromJson(otherPlayer);
+                this.otherPlayers.put(playerInfo.Name, playerInfo);
+            }
+        } catch(ParseException pe) {
+            System.out.println("position: " + pe.getPosition());
+            System.out.println(pe);
+        }
+    }
+
+
+    public com.team_glados.map.Map getComputedMap() {
+        return ComputedMap;
+    }
+
+    public void setComputedMap(com.team_glados.map.Map computedMap) {
+        ComputedMap = computedMap;
+    }
 }

@@ -7,9 +7,6 @@ import com.jeremycurny.sparkjavarestapi.util.Point;
 import com.jeremycurny.sparkjavarestapi.util.Tile;
 import com.team_glados.actions.*;
 import com.team_glados.map.Map;
-import com.team_glados.math.graph.Graph;
-import com.team_glados.math.graph.Node;
-import com.team_glados.math.graph.shortest_path.AStar;
 import spark.Request;
 import spark.Response;
 
@@ -38,16 +35,8 @@ public class UserController extends RestController {
 		};
 	}
 
-	private Map map = new Map();
-	private boolean firstRun = true;
-
-	private Graph graph;
-	private AStar<Point> aStar;
-	private List<Node<Point>> shortestPath;
-
 	@Override
 	public Object bot(Request req, Response res) {
-		System.out.println("Tock");
 
 		String s = URLDecoder.decode(req.body()).substring(4);
 		GameInfo gameInfo = new GameInfo();
@@ -62,6 +51,8 @@ public class UserController extends RestController {
 			System.out.println();
 		}
 
+		Map map = new Map();
+
 		//Update map
 		for (int i = 0; i < gameInfo.map.size(); i++) {
 			for (int j = 0; j < gameInfo.map.get(i).size(); j++) {
@@ -69,6 +60,8 @@ public class UserController extends RestController {
 			}
 		}
 
+		gameInfo.setComputedMap(map);
+		System.out.println(gameInfo.player.CarriedResources);
 		// Get best action
 		int[] weights = new int[actions.length];
 		int highestIndex = 0;

@@ -12,6 +12,7 @@ public class PlayerInfo {
     public int Resources;
     public Point Position;
 
+
     public PlayerInfo() {}
 
     public PlayerInfo(int health, int maxHealth, Point position) {

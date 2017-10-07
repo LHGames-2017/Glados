@@ -29,6 +29,10 @@ public class Map {
         return tiles.get(p);
     }
 
+    public Tile[] getTiles(){
+        return tiles.values().toArray(new Tile[0]);
+    }
+
     public Graph toGraph(){
 
         HashMap<Point, Node<Point>> nodes = new HashMap<>(tiles.values().size());
@@ -36,7 +40,10 @@ public class Map {
 
 
         tiles.forEach((point, tile) -> {
-            if (tile.Content != TileContent.Lava) {
+            if (tile.Content != TileContent.Lava &&
+                tile.Content != TileContent.Wall
+                )
+            {
                 TileNode t = new TileNode(point);
                 nodes.put(point, t);
             }
