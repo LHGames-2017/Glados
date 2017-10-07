@@ -45,11 +45,13 @@ public class UserController extends RestController {
 		GameInfo gameInfo = new GameInfo();
 		gameInfo.fromJson(s);
 
+		System.out.println("--------------------------------------------------------------------");
 		// Output current map
 		for (List<Tile> l1 : gameInfo.map) {
 			for (Tile n : l1) {
 				System.out.print(n + " ");
 			}
+			System.out.println();
 		}
 
 		//Update map

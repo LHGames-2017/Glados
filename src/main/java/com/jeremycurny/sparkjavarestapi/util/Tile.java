@@ -17,7 +17,6 @@ public class Tile {
     @Override
     public String toString() {
         switch (Content) {
-
             case Empty:
                 return " ";
             case Resource:

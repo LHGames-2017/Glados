@@ -2,6 +2,7 @@ package com.team_glados.map;
 
 import com.jeremycurny.sparkjavarestapi.util.Point;
 import com.jeremycurny.sparkjavarestapi.util.Tile;
+import com.jeremycurny.sparkjavarestapi.util.TileContent;
 import com.team_glados.math.graph.Edge;
 import com.team_glados.math.graph.Graph;
 import com.team_glados.math.graph.Node;
@@ -35,7 +36,7 @@ public class Map {
 
 
         tiles.forEach((point, tile) -> {
-            if (tile.Content == TileType.Tile) {
+            if (tile.Content == TileContent.Empty) {
                 TileNode t = new TileNode(point);
                 nodes.put(point, t);
             }
