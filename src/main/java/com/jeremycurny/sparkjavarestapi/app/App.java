@@ -6,11 +6,13 @@ import static spark.Spark.*;
 
 public class App {
 
+    public static int PORT = 8080;
+
     public static void main(String[] args) {
 
         UserController userController = new UserController();
 
-        port(3000);
+        port(PORT);
 
         before((req, res) -> {
             res.header("Access-Control-Allow-Headers", "Authorization, Content-Type");
