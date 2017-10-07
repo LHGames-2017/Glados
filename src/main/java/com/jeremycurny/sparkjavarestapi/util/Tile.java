@@ -6,34 +6,35 @@ public class Tile {
 
             this.X = x_;
             this.Y = y_;
-            this.Content = TileType.values()[content_];
+            this.Content = TileContent.values()[content_];
 
         }
 
-        public TileType Content;
+        public TileContent Content;
         public Integer X;
         public Integer Y;
 
     @Override
     public String toString() {
-         switch (Content) {
-             case 0:
-                 return " ";
-             case 1:
-                 return "W";
-             case 2:
-                 return "H";
-             case 3:
-                 return "L";
-             case 4:
-                 return "R";
-             case 5:
-                 return "S";
-             case 6:
-                 return "P";
-             default:
-                 break;
-         }
+        switch (Content) {
+
+            case Empty:
+                return " ";
+            case Resource:
+                return "R";
+            case House:
+                return "H";
+            case Player:
+                return "P";
+            case Wall:
+                return "W";
+            case Lava:
+                return "L";
+            case Shop:
+                return "S";
+            default:
+                break;
+        }
          return " ";
     }
 }
