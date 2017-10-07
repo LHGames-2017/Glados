@@ -18,6 +18,14 @@ public class GameInfo {
     public GameInfo() {
     }
 
+    public boolean hasTileNextTo(int tileType, Point point)
+    {
+        return (map.get(point.x + 1).get(point.y).Content == tileType)
+                || (map.get(point.x - 1).get(point.y).Content == tileType)
+                || (map.get(point.x).get(point.y + 1).Content == tileType)
+                || (map.get(point.x).get(point.y - 1).Content == tileType);
+    }
+
     public void fromJson(String data) {
         JSONParser parser = new JSONParser();
 
