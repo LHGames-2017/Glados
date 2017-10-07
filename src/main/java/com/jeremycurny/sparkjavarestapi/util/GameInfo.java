@@ -26,6 +26,27 @@ public class GameInfo {
                 || (map.get(point.x).get(point.y - 1).Content == tileType);
     }
 
+    public Point findTileNextTo(int tileType, Point point)
+    {
+        if (map.get(point.x + 1).get(point.y).Content == tileType)
+        {
+            return new Point(point.x + 1, point.y);
+        }
+        if (map.get(point.x - 1).get(point.y).Content == tileType)
+        {
+            return new Point(point.x - 1, point.y);
+        }
+        if (map.get(point.x).get(point.y + 1).Content == tileType)
+        {
+            return new Point(point.x, point.y + 1);
+        }
+        if (map.get(point.x).get(point.y - 1).Content == tileType)
+        {
+            return new Point(point.x, point.y - 1);
+        }
+        return null;
+    }
+
     public void fromJson(String data) {
         JSONParser parser = new JSONParser();
 
