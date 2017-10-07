@@ -18,15 +18,14 @@ public class ExploreAction extends AbstractAction {
 
 	@Override
 	public int getWeight(GameInfo info) {
-		return 100;
-//		if (ShopAction.storePosition == null && info.player.TotalResource >= 40000) {
-//			final boolean isShop = Arrays.stream(info.getComputedMap().getTiles())
-//					.anyMatch(tile -> tile.Content == TileContent.Shop);
-//			if (isShop)
-//				return 0;
-//			return 51;
-//		}
-//		return 0;
+		if (ShopAction.storePosition == null && info.player.TotalResource >= 40000) {
+			final boolean isShop = Arrays.stream(info.getComputedMap().getTiles())
+					.anyMatch(tile -> tile.Content == TileContent.Shop);
+			if (isShop)
+				return 0;
+			return 51;
+		}
+		return 0;
 	}
 
 	@Override
