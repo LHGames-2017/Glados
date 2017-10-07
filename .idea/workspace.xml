@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c8d9c0-74da-4d91-9e1c-77b74852a48f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,55 +13,113 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="50" column="67" lean-forward="false" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/AbstractAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/Action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AttackAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/AttackAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/app/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="63">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AiHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/AiHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-294">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveToCollectAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/MoveToCollectAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+                <marker date="1507395866180" expanded="false" signature="259:264" ph=" { " />
+                <marker date="1507395866180" expanded="false" signature="276:279" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/CollectAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TileContent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/TileContent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +170,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/json.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/ActionContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/AiHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/controller/RestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Player.java" />
@@ -129,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/app/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team_glados/actions/AttackAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java" />
       </list>
     </option>
   </component>
@@ -184,37 +241,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -222,7 +275,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -231,7 +284,7 @@
               <item name="sparkjavarestapi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -241,7 +294,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -251,7 +304,17 @@
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Glados" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sparkjavarestapi" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -260,7 +323,7 @@
               <item name="team_glados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Team GladOS AI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Glados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -269,17 +332,14 @@
               <item name="team_glados" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lhgames-java-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Glados" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="ressources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,29 +516,29 @@
     <option name="totallyTimeSpent" value="13677000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22588523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16225165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23399559" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978448" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978448" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -530,7 +590,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Tile.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/TileType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/ActionContent.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Player.java" />
@@ -539,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1116">
           <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -550,7 +608,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/PlayerInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/controller/RestController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/TileContent.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/TileContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/UpgradeType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/JsonUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Json.java" />
@@ -560,7 +625,6 @@
     <entry file="file://$USER_HOME$/sources/android-25/java/util/HashMap.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.6.0/spark-core-2.6.0.jar!/spark/http/matching/MatcherFilter.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/PurchasableItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Point.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.6.0/spark-core-2.6.0.jar!/spark/Spark.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -568,7 +632,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/PlayerInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/ressources/web/swagger.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -591,17 +662,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/TileType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/AiHelper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/AiHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/ActionContent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Tile.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/Main.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,14 +743,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/app/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="63">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -690,8 +758,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="50" column="67" lean-forward="false" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+        <state relative-caret-position="-294">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team_glados/actions/CollectAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="81" lean-forward="true" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jeremycurny/sparkjavarestapi/util/GameInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="42" column="68" lean-forward="false" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
           <folding />
         </state>
       </provider>
