@@ -23,7 +23,7 @@ public class UpgradeAction extends AbstractAction {
 		toUpgrade.push(new Pair<>(500000, UpgradeType.CarryingCapacity));
 		toUpgrade.push(new Pair<>(500000, UpgradeType.CollectingSpeed));
 		toUpgrade.push(new Pair<>(100000, UpgradeType.MaximumHealth));
-		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : épée
+//		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : épée
 
 		toUpgrade.push(new Pair<>(250000, UpgradeType.AttackPower));
 		toUpgrade.push(new Pair<>(250000, UpgradeType.Defence));
@@ -45,12 +45,12 @@ public class UpgradeAction extends AbstractAction {
 		toUpgrade.push(new Pair<>(50000, UpgradeType.CollectingSpeed));
 
 		toUpgrade.push(new Pair<>(15000, UpgradeType.AttackPower));
-		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : bouclier
+//		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : bouclier
 
 		toUpgrade.push(new Pair<>(15000, UpgradeType.Defence));
 
-		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : sac
-		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : pickaxe
+//		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : sac
+//		toUpgrade.push(new Pair<>(40000, UpgradeType.Item)); // Item : pickaxe
 		toUpgrade.push(new Pair<>(15000, UpgradeType.CarryingCapacity));
 		toUpgrade.push(new Pair<>(15000, UpgradeType.CollectingSpeed));
 	}

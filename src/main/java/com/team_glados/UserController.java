@@ -76,7 +76,8 @@ public class UserController extends RestController {
 			}
 		}
 
-		System.out.println(actions[highestIndex].getClass().getName());
+        System.out.println(gameInfo.player.TotalResource);
+        System.out.println(actions[highestIndex].getClass().getName());
 
 		String action;
 		if (highestValue == 0) {
