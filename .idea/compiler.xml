@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lhgames-java-server" />
+        <module name="Team GladOS AI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="lhgames-java-server" target="1.8" />
+      <module name="Team GladOS AI" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
