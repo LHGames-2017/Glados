@@ -32,6 +32,7 @@ public class UserController extends RestController {
 				new StealAction(),
 				new SuicideAction(),
 				new UpgradeAction()
+				// test
 		};
 	}
 
