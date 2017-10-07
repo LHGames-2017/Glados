@@ -5,34 +5,18 @@ package com.team_glados.math.graph;
  *
  * @author Philippe Rivest
  */
-public class Node {
+public class Node<T> {
 
-	private int id;
+	private T id;
 
-	/**
-	 * Instancies une nouvelle Node (sommet).
-	 *
-	 * @param id l'identifiant du sommet
-	 */
-	public Node(int id) {
+	public Node(T id) {
 		this.id = id;
 	}
 
-	/**
-	 * Retourne l'identifiant du sommet.
-	 *
-	 * @return l'identifiant du sommet
-	 */
-	public int getId() {
+	public T getId() {
 		return id;
 	}
 
-	/**
-	 * Calcule le facteur heuristique entre ce sommet et le sommet « n ».
-	 *
-	 * @param n le sommet avec lequel calculer l'heuristique
-	 * @return Le facteur heuristique entre ce sommet et le sommet « n »
-	 */
 	public double heuristicToNode(Node n){
 		return 0;
 	}
@@ -51,11 +35,11 @@ public class Node {
 
 	@Override
 	public int hashCode() {
-		return getId();
+		return id.hashCode();
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Node{%s}", id);
+		return String.format("Node{%s}", id.toString());
 	}
 }

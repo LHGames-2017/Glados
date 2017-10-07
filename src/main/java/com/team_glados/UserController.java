@@ -1,9 +1,9 @@
 package com.team_glados;
 
 import com.jeremycurny.sparkjavarestapi.controller.RestController;
-import com.jeremycurny.sparkjavarestapi.util.AiHelper;
 import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 import com.team_glados.actions.*;
+import com.team_glados.map.Map;
 import spark.Request;
 import spark.Response;
 
@@ -31,12 +31,23 @@ public class UserController extends RestController {
 		};
 	}
 
+	private Map map = new Map();
+	private boolean firstRun = true;
+
 	@Override
 	public Object bot(Request req, Response res) {
 		String s = URLDecoder.decode(req.body()).substring(4);
 		GameInfo gameInfo = new GameInfo();
 		gameInfo.fromJson(s);
 
+		//Update map
+        for (int i = 0; i < gameInfo.map.size(); i++) {
+            for (int j = 0; j < gameInfo.map.get(i).size(); j++) {
+                map.addTile(gameInfo.map.get(i).get(j));
+            }
+        }
+
+        //Get best action
 		int[] weights = new int[actions.length];
 		int highestIndex = 0;
 		int highestValue = 1000;
@@ -48,8 +59,9 @@ public class UserController extends RestController {
 			}
 		}
 
-		System.out.print(actions[highestIndex].getClass().getName());
-		String action = actions[highestIndex].doIt(gameInfo);
-		return super.resJson(req, res, 200, action);
-	}
+		//Send action command
+        System.out.print(actions[highestIndex].getClass().getName());
+        String action = actions[highestIndex].doIt(gameInfo);
+        return super.resJson(req, res, 200, action);
+    }
 }

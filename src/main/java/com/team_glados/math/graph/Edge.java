@@ -7,79 +7,33 @@ package com.team_glados.math.graph;
  */
 public class Edge {
 
-	private int id;
 	private Node source;
 	private Node dest;
 
 	private double weight;
 
-	/**
-	 * Instancies un nouveau Edge (arête).
-	 *
-	 * @param id     l'identifiant de l'arête
-	 * @param source la source de l'arête
-	 * @param dest   la destination de l'arête
-	 * @param weight le poids de l'arête
-	 */
-	public Edge(int id, Node source, Node dest, double weight) {
-		this.id = id;
+	public Edge(Node source, Node dest, double weight) {
 		this.source = source;
 		this.dest = dest;
 		this.weight = weight;
 	}
 
-	/**
-	 * Instancies un nouveau Edge (arête) avec un poids de 0.
-	 *
-	 * @param id     l'identifiant de l'arête
-	 * @param source la source de l'arête
-	 * @param dest   la destination de l'arête
-	 */
-	public Edge(int id, Node source, Node dest) {
-		this(id,source,dest, 0);
+	public Edge(Node source, Node dest) {
+		this(source,dest, 0);
 	}
 
-	/**
-	 * Retourne l'identifiant de l'arête.
-	 *
-	 * @return l'identifiant de l'arête
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * Retourne la source de l'arête.
-	 *
-	 * @return la source de l'arête
-	 */
 	public Node getSource() {
 		return source;
 	}
 
-	/**
-	 * Retourne la destination de l'arête.
-	 *
-	 * @return la destination de l'arête
-	 */
 	public Node getDest() {
 		return dest;
 	}
 
-	/**
-	 * Retourne le poids de l'arête.
-	 *
-	 * @return le poids de l'arête
-	 */
 	public double getWeight() {
 		return weight;
 	}
 
-	/**
-	 * Met à jour le poids de l'arête.
-	 *
-	 * @param weight le poids de l'arête
-	 */
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
@@ -93,16 +47,18 @@ public class Edge {
 
 		Edge edge = (Edge) o;
 
-		return getId() == edge.getId();
+		return getDest() == edge.getDest() && getSource() == edge.getSource();
 	}
 
 	@Override
 	public int hashCode() {
-		return getId();
+		int result = getSource().hashCode();
+		result = 31 * result + getDest().hashCode();
+		return result;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Edge{%d} : %s --(%s)--> %s", id, source, weight, dest);
+		return String.format("Edge : %s --(%s)--> %s", source, weight, dest);
 	}
 }

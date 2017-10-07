@@ -6,10 +6,11 @@ public class Tile {
 
             this.X = x_;
             this.Y = y_;
-            this.Content = content_;
+            this.Content = TileType.values()[content_];
 
         }
-        public Integer Content;
+
+        public TileType Content;
         public Integer X;
         public Integer Y;
 
