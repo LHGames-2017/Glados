@@ -1,8 +1,21 @@
 package com.team_glados.actions;
 
-import com.jeremycurny.sparkjavarestapi.util.GameInfo;
+import com.jeremycurny.sparkjavarestapi.util.*;
+import com.team_glados.map.Map;
+import com.team_glados.math.graph.Graph;
+import com.team_glados.math.graph.Node;
+import com.team_glados.math.graph.shortest_path.AStar;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class MoveToHouseAction extends AbstractAction {
+
+	private Graph graph;
+	private AStar<Point> aStar;
+	private List<Node<Point>> shortestPath;
+
 	@Override
 	public int getWeight(GameInfo info) {
 		if (info.player.CarriedResources == info.player.CarryingCapacity)
@@ -12,6 +25,15 @@ public class MoveToHouseAction extends AbstractAction {
 
 	@Override
 	public String doIt(GameInfo info) {
-		return null;
+		final Map computedMap = info.getComputedMap();
+		graph = computedMap.toGraph();
+		aStar = new AStar<>(graph);
+
+		final Node start = graph.getNode(info.player.Position);
+		final Node end = graph.getNode(info.player.HouseLocation);
+
+		shortestPath = aStar.findShortestPath(start, end);
+
+		return AiHelper.CreateMoveAction(shortestPath.get(1).getId());
 	}
 }
