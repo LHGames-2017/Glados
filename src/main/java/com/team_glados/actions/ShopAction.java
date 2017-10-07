@@ -2,6 +2,7 @@ package com.team_glados.actions;
 
 import com.jeremycurny.sparkjavarestapi.util.AiHelper;
 import com.jeremycurny.sparkjavarestapi.util.GameInfo;
+import com.jeremycurny.sparkjavarestapi.util.Point;
 import com.jeremycurny.sparkjavarestapi.util.PurchasableItem;
 
 import java.util.Stack;
@@ -9,6 +10,7 @@ import java.util.Stack;
 public class ShopAction extends AbstractAction {
 
 	public static boolean hasHealthPotion = false;
+	public static Point storePosition = null;
 
 	private Stack<PurchasableItem> toBuy;
 
@@ -31,6 +33,7 @@ public class ShopAction extends AbstractAction {
 	@Override
 	public String doIt(GameInfo info) {
 		PurchasableItem item = toBuy.pop();
+		UpgradeAction.toUpgrade.pop();
 		return AiHelper.CreatePurchaseAction(item);
 	}
 }

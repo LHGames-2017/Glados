@@ -40,10 +40,7 @@ public class Map {
 
 
         tiles.forEach((point, tile) -> {
-            if (tile.Content != TileContent.Lava &&
-                tile.Content != TileContent.Wall
-                )
-            {
+            if (tile.Content != TileContent.Lava) {
                 TileNode t = new TileNode(point);
                 nodes.put(point, t);
             }
