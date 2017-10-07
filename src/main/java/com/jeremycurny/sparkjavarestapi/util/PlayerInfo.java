@@ -21,14 +21,17 @@ public class PlayerInfo {
     }
 
     public void fromJson(JSONObject playerInfo) {
-        Name = String.valueOf(playerInfo.get("Name").toString());
-        Health = Integer.valueOf(playerInfo.get("Health").toString());
-        MaxHealth = Integer.valueOf(playerInfo.get("MaxHealth").toString());
-        AttackPower = Integer.valueOf(playerInfo.get("AttackPower").toString());
-        Defence = Integer.valueOf(playerInfo.get("Defence").toString());
-        Resources = Integer.valueOf(playerInfo.get("Resources").toString());
+        Name = String.valueOf(playerInfo.get("Key").toString());
 
-        JSONObject position = (JSONObject)playerInfo.get("Position");
+        final JSONObject playerValues = ((JSONObject) playerInfo.get("Value"));
+
+        Health = Integer.valueOf(playerValues.get("Health").toString());
+        MaxHealth = Integer.valueOf(playerValues.get("MaxHealth").toString());
+        AttackPower = Integer.valueOf(playerValues.get("AttackPower").toString());
+        Defence = Integer.valueOf(playerValues.get("Defence").toString());
+        Resources = Integer.valueOf(playerValues.get("Resources").toString());
+
+        JSONObject position = (JSONObject)playerValues.get("Position");
         Position = new Point();
         Position.fromJson(position);
     }
