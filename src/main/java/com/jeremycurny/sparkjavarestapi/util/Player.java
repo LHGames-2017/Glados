@@ -30,6 +30,7 @@ public class Player {
 
     public void fromJson(JSONObject player) {
         Health = Integer.valueOf(player.get("Health").toString());
+        Score = Integer.valueOf(player.get("Score").toString());
         MaxHealth = Integer.valueOf(player.get("MaxHealth").toString());
         CarriedResources = Integer.valueOf(player.get("CarriedResources").toString());
         CarryingCapacity = Integer.valueOf(player.get("CarryingCapacity").toString());
