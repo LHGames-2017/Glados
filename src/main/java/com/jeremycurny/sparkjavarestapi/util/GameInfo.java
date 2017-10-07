@@ -18,7 +18,7 @@ public class GameInfo {
     public GameInfo() {
     }
 
-    public boolean hasTileNextToPlayer(TileType tileContent)
+    public boolean hasTileNextToPlayer(TileContent tileContent)
     {
         return (map.get(9).get(10).Content == tileContent)
                 || (map.get(11).get(10).Content == tileContent)
@@ -26,7 +26,7 @@ public class GameInfo {
                 || (map.get(10).get(11).Content == tileContent);
     }
 
-    public Point findTileNextTo(TileType tileContent, Point point)
+    public Point findTileNextTo(TileContent tileContent, Point point)
     {
         if (map.get(9).get(10).Content == tileContent)
         {
