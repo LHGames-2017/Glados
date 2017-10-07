@@ -6,7 +6,7 @@ import static spark.Spark.*;
 
 public class App {
 
-    public static int PORT = 3000;
+    public static int PORT = 8080;
 
     public static void main(String[] args) {
 
