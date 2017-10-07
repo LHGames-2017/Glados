@@ -68,6 +68,5 @@ public class GameInfo {
             System.out.println("position: " + pe.getPosition());
             System.out.println(pe);
         }
-        System.out.println();
     }
 }

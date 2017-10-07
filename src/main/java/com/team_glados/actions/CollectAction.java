@@ -8,8 +8,7 @@ public class CollectAction extends AbstractAction {
 
 	@Override
 	public int getWeight(GameInfo info) {
-		if (info.hasTileNextTo(1, info.player.Position))
-		{
+		if (info.hasTileNextTo(1, info.player.Position)) {
 			return 50;
 		}
 		return 0;
