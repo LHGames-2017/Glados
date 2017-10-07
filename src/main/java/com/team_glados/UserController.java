@@ -49,15 +49,17 @@ public class UserController extends RestController {
 		for (List<Tile> l1 : gameInfo.map) {
 			for (Tile n : l1) {
 				System.out.print(n + " ");
+			}
+		}
 
 		//Update map
-        for (int i = 0; i < gameInfo.map.size(); i++) {
-            for (int j = 0; j < gameInfo.map.get(i).size(); j++) {
-                map.addTile(gameInfo.map.get(i).get(j));
-            }
-        }
+		for (int i = 0; i < gameInfo.map.size(); i++) {
+			for (int j = 0; j < gameInfo.map.get(i).size(); j++) {
+				map.addTile(gameInfo.map.get(i).get(j));
+			}
+		}
 
-        // Get best action
+		// Get best action
 //		int[] weights = new int[actions.length];
 //		int highestIndex = 0;
 //		int highestValue = 1000;
