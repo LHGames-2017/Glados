@@ -5,7 +5,7 @@ import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 public class AttackAction extends AbstractAction {
 	@Override
 	public int getWeight(GameInfo info) {
-		return 0;
+		return weight;
 	}
 
 	@Override
