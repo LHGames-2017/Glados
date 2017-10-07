@@ -18,31 +18,31 @@ public class GameInfo {
     public GameInfo() {
     }
 
-    public boolean hasTileNextTo(int tileType, Point point)
+    public boolean hasTileNextToPlayer(TileType tileContent)
     {
-        return (map.get(point.x + 1).get(point.y).Content == tileType)
-                || (map.get(point.x - 1).get(point.y).Content == tileType)
-                || (map.get(point.x).get(point.y + 1).Content == tileType)
-                || (map.get(point.x).get(point.y - 1).Content == tileType);
+        return (map.get(9).get(10).Content == tileContent)
+                || (map.get(11).get(10).Content == tileContent)
+                || (map.get(10).get(9).Content == tileContent)
+                || (map.get(10).get(11).Content == tileContent);
     }
 
-    public Point findTileNextTo(int tileType, Point point)
+    public Point findTileNextTo(TileType tileContent, Point point)
     {
-        if (map.get(point.x + 1).get(point.y).Content == tileType)
+        if (map.get(9).get(10).Content == tileContent)
         {
-            return new Point(point.x + 1, point.y);
+            return new Point(9, 10);
         }
-        if (map.get(point.x - 1).get(point.y).Content == tileType)
+        if (map.get(11).get(10).Content == tileContent)
         {
-            return new Point(point.x - 1, point.y);
+            return new Point(11, 10);
         }
-        if (map.get(point.x).get(point.y + 1).Content == tileType)
+        if (map.get(10).get(9).Content == tileContent)
         {
-            return new Point(point.x, point.y + 1);
+            return new Point(10, 9);
         }
-        if (map.get(point.x).get(point.y - 1).Content == tileType)
+        if (map.get(10).get(11).Content == tileContent)
         {
-            return new Point(point.x, point.y - 1);
+            return new Point(10, 11);
         }
         return null;
     }

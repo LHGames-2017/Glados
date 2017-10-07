@@ -6,7 +6,5 @@ package com.team_glados.actions;
  * @author technophil98
  */
 abstract class AbstractAction implements Action {
-
-
-
+    int weight;
 }

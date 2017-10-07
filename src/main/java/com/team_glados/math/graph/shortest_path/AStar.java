@@ -38,7 +38,7 @@ public class AStar {
 	 */
 	public List<Node> findShortestPath(Node start, Node end){
 
-		if (graph.getNode(start.getId()) != null && graph.getNode(end.getId()) != null){
+		if (graph.containsNode(start) && graph.containsNode(end)){
 
 			aStarNodes.values().forEach(aStarNode -> aStarNode.sethScore(aStarNode.getNode().heuristicToNode(end)));
 

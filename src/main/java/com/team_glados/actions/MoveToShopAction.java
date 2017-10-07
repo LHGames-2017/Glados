@@ -3,9 +3,12 @@ package com.team_glados.actions;
 import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 
 public class MoveToShopAction extends AbstractAction {
-	@Override
-	public int getWeight(GameInfo info) {
-		return 0;
+
+
+    @Override
+    public int getWeight(GameInfo info)
+    {
+        return 0;
 	}
 
 	@Override
