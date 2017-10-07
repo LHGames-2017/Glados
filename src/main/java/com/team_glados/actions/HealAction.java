@@ -6,8 +6,8 @@ import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 public class HealAction extends AbstractAction {
 	@Override
 	public int getWeight(GameInfo info) {
-		if (info.player.MaxHealth - info.player.Health >= 5 && ShopAction.hasHealthPotion)
-			return 90;
+//		if (info.player.MaxHealth - info.player.Health >= 5 && ShopAction.hasHealthPotion)
+//			return 90;
 		return 0;
 	}
 

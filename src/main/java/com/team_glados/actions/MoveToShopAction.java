@@ -19,8 +19,8 @@ public class MoveToShopAction extends AbstractAction {
     @Override
     public int getWeight(GameInfo info)
     {
-    	if (info.player.CarriedResources == 0 && info.player.TotalResource >= 40000 && UpgradeAction.toUpgrade.peek().getValue() == UpgradeType.Item)
-    		return 61;
+//    	if (info.player.CarriedResources == 0 && info.player.TotalResource >= 40000 && UpgradeAction.toUpgrade.peek().getValue() == UpgradeType.Item)
+//    		return 61;
         return 0;
 	}
 

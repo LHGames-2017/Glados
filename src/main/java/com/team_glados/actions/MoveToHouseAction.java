@@ -1,13 +1,13 @@
 package com.team_glados.actions;
 
-import com.jeremycurny.sparkjavarestapi.util.*;
+import com.jeremycurny.sparkjavarestapi.util.AiHelper;
+import com.jeremycurny.sparkjavarestapi.util.GameInfo;
+import com.jeremycurny.sparkjavarestapi.util.Point;
 import com.team_glados.map.Map;
 import com.team_glados.math.graph.Graph;
 import com.team_glados.math.graph.Node;
 import com.team_glados.math.graph.shortest_path.AStar;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class MoveToHouseAction extends AbstractAction {
@@ -33,6 +33,8 @@ public class MoveToHouseAction extends AbstractAction {
 		final Node end = graph.getNode(info.player.HouseLocation);
 
 		shortestPath = aStar.findShortestPath(start, end);
+
+		shortestPath.forEach(System.out::println);
 
 		return AiHelper.CreateMoveAction(shortestPath.get(1).getId());
 	}
