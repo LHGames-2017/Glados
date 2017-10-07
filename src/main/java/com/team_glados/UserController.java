@@ -53,9 +53,7 @@ public class UserController extends RestController {
 		GameInfo gameInfo = new GameInfo();
 		gameInfo.fromJson(s);
 
-		System.out.println("Tock2");
-
-		System.out.println("--------------------------------------------------------------------");
+		System.out.println("\n--------------------------------------------------------------------\n");
 		// Output current map
 		for (List<Tile> l1 : gameInfo.map) {
 			for (Tile n : l1) {
@@ -72,38 +70,26 @@ public class UserController extends RestController {
 		}
 
 		// Get best action
-//		int[] weights = new int[actions.length];
-//		int highestIndex = 0;
-//		int highestValue = 1000;
-//		for (int i = 0; i < actions.length; i++) {
-//			weights[i] = actions[i].getWeight(gameInfo);
-//			if (weights[i] > highestValue) {
-//				highestIndex = i;
-//				highestValue = weights[i];
-//			}
-//		}
-
-//		System.out.print(actions[highestIndex].getClass().getName());
-//		String action = actions[highestIndex].doIt(gameInfo);
-
-		if (firstRun) {
-			graph = map.toGraph();
-			aStar = new AStar<>(graph);
-
-			final Node start = graph.getNode(gameInfo.player.Position);
-			final Node end = graph.getNode(new Point(15, 25));
-			shortestPath = aStar.findShortestPath(start, end);
-
-			shortestPath.remove(0);
-			firstRun = false;
+		int[] weights = new int[actions.length];
+		int highestIndex = 0;
+		int highestValue = 0;
+		for (int i = 0; i < actions.length; i++) {
+			weights[i] = actions[i].getWeight(gameInfo);
+			if (weights[i] > highestValue) {
+				highestIndex = i;
+				highestValue = weights[i];
+			}
 		}
 
-		System.out.println(gameInfo.player.Position);
-		shortestPath.forEach(System.out::println);
+		System.out.println(actions[highestIndex].getClass().getName());
 
+		String action;
+		if (highestValue == 0) {
+			action = AiHelper.CreateMoveAction(new Point(gameInfo.player.Position.x, gameInfo.player.Position.y + 1));
+		} else {
+			action = actions[highestIndex].doIt(gameInfo);
+		}
 
-
-		String action = AiHelper.CreateMoveAction(shortestPath.remove(0).getId());
 		return super.resJson(req, res, 200, action);
 	}
 }

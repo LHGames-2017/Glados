@@ -5,6 +5,8 @@ import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 public class MoveToHouseAction extends AbstractAction {
 	@Override
 	public int getWeight(GameInfo info) {
+		if (info.player.CarriedResources == info.player.CarryingCapacity)
+			return 100; // RUN FOR YOUR RESOURCES!!!
 		return 0;
 	}
 
