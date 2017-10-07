@@ -18,31 +18,31 @@ public class GameInfo {
     public GameInfo() {
     }
 
-    public boolean hasTileNextTo(int tileContent, Point point)
+    public boolean hasTileNextToPlayer(int tileContent)
     {
-        return (map.get(point.x + 1).get(point.y).Content == tileContent)
-                || (map.get(point.x - 1).get(point.y).Content == tileContent)
-                || (map.get(point.x).get(point.y + 1).Content == tileContent)
-                || (map.get(point.x).get(point.y - 1).Content == tileContent);
+        return (map.get(9).get(10).Content == tileContent)
+                || (map.get(11).get(10).Content == tileContent)
+                || (map.get(10).get(9).Content == tileContent)
+                || (map.get(10).get(11).Content == tileContent);
     }
 
     public Point findTileNextTo(int tileContent, Point point)
     {
-        if (map.get(point.x + 1).get(point.y).Content == tileContent)
+        if (map.get(9).get(10).Content == tileContent)
         {
-            return new Point(point.x + 1, point.y);
+            return new Point(9, 10);
         }
-        if (map.get(point.x - 1).get(point.y).Content == tileContent)
+        if (map.get(11).get(10).Content == tileContent)
         {
-            return new Point(point.x - 1, point.y);
+            return new Point(11, 10);
         }
-        if (map.get(point.x).get(point.y + 1).Content == tileContent)
+        if (map.get(10).get(9).Content == tileContent)
         {
-            return new Point(point.x, point.y + 1);
+            return new Point(10, 9);
         }
-        if (map.get(point.x).get(point.y - 1).Content == tileContent)
+        if (map.get(10).get(11).Content == tileContent)
         {
-            return new Point(point.x, point.y - 1);
+            return new Point(10, 11);
         }
         return null;
     }
