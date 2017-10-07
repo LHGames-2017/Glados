@@ -36,7 +36,7 @@ public class Map {
 
 
         tiles.forEach((point, tile) -> {
-            if (tile.Content == TileContent.Empty) {
+            if (tile.Content != TileContent.Lava) {
                 TileNode t = new TileNode(point);
                 nodes.put(point, t);
             }

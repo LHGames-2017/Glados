@@ -7,11 +7,13 @@ import com.jeremycurny.sparkjavarestapi.util.Point;
 import com.jeremycurny.sparkjavarestapi.util.Tile;
 import com.team_glados.actions.*;
 import com.team_glados.map.Map;
+import com.team_glados.math.graph.Graph;
+import com.team_glados.math.graph.Node;
+import com.team_glados.math.graph.shortest_path.AStar;
 import spark.Request;
 import spark.Response;
 
 import java.net.URLDecoder;
-import java.util.Arrays;
 import java.util.List;
 
 public class UserController extends RestController {
@@ -39,11 +41,19 @@ public class UserController extends RestController {
 	private Map map = new Map();
 	private boolean firstRun = true;
 
+	private Graph graph;
+	private AStar<Point> aStar;
+	private List<Node<Point>> shortestPath;
+
 	@Override
 	public Object bot(Request req, Response res) {
+		System.out.println("Tock");
+
 		String s = URLDecoder.decode(req.body()).substring(4);
 		GameInfo gameInfo = new GameInfo();
 		gameInfo.fromJson(s);
+
+		System.out.println("Tock2");
 
 		System.out.println("--------------------------------------------------------------------");
 		// Output current map
@@ -76,7 +86,24 @@ public class UserController extends RestController {
 //		System.out.print(actions[highestIndex].getClass().getName());
 //		String action = actions[highestIndex].doIt(gameInfo);
 
-		String action = AiHelper.CreateMoveAction(new Point(gameInfo.player.Position.x, gameInfo.player.Position.y + 1));
+		if (firstRun) {
+			graph = map.toGraph();
+			aStar = new AStar<>(graph);
+
+			final Node start = graph.getNode(gameInfo.player.Position);
+			final Node end = graph.getNode(new Point(15, 25));
+			shortestPath = aStar.findShortestPath(start, end);
+
+			shortestPath.remove(0);
+			firstRun = false;
+		}
+
+		System.out.println(gameInfo.player.Position);
+		shortestPath.forEach(System.out::println);
+
+
+
+		String action = AiHelper.CreateMoveAction(shortestPath.remove(0).getId());
 		return super.resJson(req, res, 200, action);
 	}
 }

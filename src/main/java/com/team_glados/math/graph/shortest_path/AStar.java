@@ -11,7 +11,7 @@ import java.util.Map.Entry;
  *
  * @author Philippe Rivest
  */
-public class AStar {
+public class AStar<T> {
 
 	private Graph graph;
 	private Map<Node, AStarNode> aStarNodes  = new HashMap<>();
@@ -36,7 +36,7 @@ public class AStar {
 	 * @param end   Le sommet d'arrivée
 	 * @return Une liste de sommets représentant le chemin parcouru
 	 */
-	public List<Node> findShortestPath(Node start, Node end){
+	public List<Node<T>> findShortestPath(Node start, Node end){
 
 		if (graph.containsNode(start) && graph.containsNode(end)){
 
@@ -92,8 +92,8 @@ public class AStar {
 	 * @param dest La destination de la recherche
 	 * @return une liste de sommets représentant le chemin le plus court
 	 */
-	private List<Node> createPath(Map<AStarNode, AStarNode> path, AStarNode dest){
-		final List<Node> pathList = new ArrayList<>();
+	private List<Node<T>> createPath(Map<AStarNode, AStarNode> path, AStarNode dest){
+		final List<Node<T>> pathList = new ArrayList<>();
 
 		pathList.add(dest.getNode());
 

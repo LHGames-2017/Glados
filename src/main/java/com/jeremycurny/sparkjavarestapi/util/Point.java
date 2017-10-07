@@ -41,4 +41,27 @@ public class Point {
         x = Integer.valueOf(point.get("X").toString());
         y = Integer.valueOf(point.get("Y").toString());
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Point)) return false;
+
+        Point point = (Point) o;
+
+        if (!x.equals(point.x)) return false;
+        return y.equals(point.y);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x.hashCode();
+        result = 31 * result + y.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "("+ x + ","+ y +")";
+    }
 }

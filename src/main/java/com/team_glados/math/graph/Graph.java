@@ -56,7 +56,7 @@ public class Graph {
 		return nodes.put(n.getId(), n) != n;
 	}
 
-	public Node getNode(int id) {
+	public Node getNode(Object id) {
 		return nodes.get(id);
 	}
 
