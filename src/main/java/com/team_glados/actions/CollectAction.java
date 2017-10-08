@@ -16,16 +16,10 @@ public class CollectAction extends AbstractAction {
 		return 0;
 	}
 
-	//info.findTileNextToPlayer(TileContent.Resource)
 
 	@Override
 	public String doIt(GameInfo info) {
-//		System.out.println(info.player.Position);
 		final Point tileNextToPlayer = info.findTileNextToPlayer(TileContent.Resource);
-
-//		System.out.println(tileNextToPlayer);
-//		System.out.println(info.relativeToAbsolute(tileNextToPlayer));
-
 		return CreateCollectAction(info.relativeToAbsolute(tileNextToPlayer));
 	}
 }

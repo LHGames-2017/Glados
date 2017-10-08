@@ -3,10 +3,12 @@ package com.team_glados.actions;
 import com.jeremycurny.sparkjavarestapi.util.AiHelper;
 import com.jeremycurny.sparkjavarestapi.util.GameInfo;
 import com.jeremycurny.sparkjavarestapi.util.Point;
+import com.jeremycurny.sparkjavarestapi.util.TileContent;
 import com.team_glados.math.graph.Graph;
 import com.team_glados.math.graph.Node;
 import com.team_glados.math.graph.shortest_path.AStar;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ExploreAction extends AbstractAction {
@@ -17,13 +19,13 @@ public class ExploreAction extends AbstractAction {
 
 	@Override
 	public int getWeight(GameInfo info) {
-//		if (ShopAction.storePosition == null && info.player.TotalResource >= 40000) {
-//			final boolean isShop = Arrays.stream(info.getComputedMap().getTiles())
-//					.anyMatch(tile -> tile.Content == TileContent.Shop);
-//			if (isShop)
-//				return 0;
-//			return 51;
-//		}
+		if (ShopAction.storePosition == null && info.player.TotalResource >= 40000) {
+			final boolean isShop = Arrays.stream(info.getComputedMap().getTiles())
+					.anyMatch(tile -> tile.Content == TileContent.Shop);
+			if (isShop)
+				return 0;
+			return 51;
+		}
 		return 0;
 	}
 

@@ -24,9 +24,9 @@ public class ShopAction extends AbstractAction {
 
 	@Override
 	public int getWeight(GameInfo info) {
-//		if (info.player.TotalResource > 40000 && !toBuy.empty()) {
-//			return 70;
-//		}
+		if (info.player.TotalResource > 40000 && !toBuy.empty()) {
+			return 70;
+		}
 		return 0;
 	}
 
