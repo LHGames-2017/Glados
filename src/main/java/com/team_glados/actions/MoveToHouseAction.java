@@ -35,7 +35,7 @@ public class MoveToHouseAction extends AbstractAction {
 
 		shortestPath = aStar.findShortestPath(start, end);
 
-		if (shortestPath.size() == 0 && !info.player.Position.equals(info.player.HouseLocation)) //sum tin wong https://www.youtube.com/watch?v=AmclgO6w0C0
+		if ((shortestPath == null || shortestPath.size() == 0) && !info.player.Position.equals(info.player.HouseLocation)) //sum tin wong https://www.youtube.com/watch?v=AmclgO6w0C0
 		{
 			System.out.println("Uh ho, A* is stuck! We will help him!");
 
@@ -52,7 +52,10 @@ public class MoveToHouseAction extends AbstractAction {
 
 				move = new Point(info.player.Position.x + signumX, info.player.Position.y + signumY);
 
-			}while (computedMap.tileAt(move).Content != TileContent.Lava || attempt < 2 );
+			}while (computedMap.tileAt(move).Content != TileContent.Lava && //Unwalkable tiles
+					computedMap.tileAt(move).Content != TileContent.Player &&
+					computedMap.tileAt(move).Content != TileContent.Resource &&
+					attempt < 2 );
 
 
 			return AiHelper.CreateMoveAction(move);

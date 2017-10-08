@@ -32,7 +32,7 @@ public class MoveToCollectAction extends AbstractAction {
 
 		final Tile closestTile = Arrays.stream(computedMap.getTiles())
 				.filter(tile -> tile.Content == TileContent.Resource)
-				.max(Comparator.comparingDouble(tile -> Math.sqrt(Math.pow(tile.X - info.player.Position.x, 2) + Math.pow(tile.Y - info.player.Position.x, 2))))
+				.min(Comparator.comparingDouble(tile -> Math.sqrt(Math.pow(tile.X - info.player.Position.x, 2) + Math.pow(tile.Y - info.player.Position.x, 2))))
 				.orElse(new Tile(0, info.player.Position.x, info.player.Position.y));
 
 		final Node start = graph.getNode(info.player.Position);
